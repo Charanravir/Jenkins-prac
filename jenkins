@@ -9,6 +9,7 @@ script {
                     }
 }
 }
+}
 stage ('test'){
 steps{
 script {
@@ -27,6 +28,7 @@ script {
 }
 }
 
+}
 }
 }
 
