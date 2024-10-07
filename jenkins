@@ -13,6 +13,7 @@ script {
                     catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
                         sh 'sleep 3; echo "This is test stage"'
                     }
+}
   }
  }
 stage ('deploy'){
