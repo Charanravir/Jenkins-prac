@@ -17,6 +17,7 @@ stage ('deploy'){
 steps{
 sleep 2
 echo "deploy stage"
+
 }
 }
 
