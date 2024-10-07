@@ -5,6 +5,25 @@ stage ('build'){
 steps{
 sleep 5
 echo " build stage"
-}}
+}
+}
+stage ('test'){
+steps{
+sleep 3
+echo "test stage" 
+  }
+ }
+stage ('deploy'){
+steps{
+sleep 2
+echo "deploy stage"
+}
+}
+
+}
+}
+}
+}
+}
 }
 }
