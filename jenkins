@@ -3,8 +3,10 @@ agent any
 stages{
 stage ('build'){
 steps{
-sleep 5
-echo " build stage"
+script {
+                    catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
+                        sh 'sleep 3; echo "This is build stage"'
+                    }
 }
 }
 stage ('test'){
@@ -18,9 +20,10 @@ script {
  }
 stage ('deploy'){
 steps{
-sleep 2
-echo "deploy stage"
-
+script {
+                    catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
+                        sh 'sleep 3; echo "This is deployment stage"'
+                    }
 }
 }
 
